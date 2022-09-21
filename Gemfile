@@ -75,3 +75,6 @@ end
 group :production do
   gem 'pg'
 end
+
+# Use for user authentication
+gem 'devise'
