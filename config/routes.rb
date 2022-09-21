@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'pages#home'
+  get 'login', to: 'pages#login'
 end
