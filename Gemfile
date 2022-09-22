@@ -77,4 +77,4 @@ group :production do
 end
 
 # Use for user authentication
-gem 'devise'
+# gem 'devise'
