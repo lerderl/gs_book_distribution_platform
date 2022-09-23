@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   root 'pages#login'
   get 'home', to: 'pages#home'
-  resources :books, only: [:show]
+  resources :books, only: [:show, :index]
 end

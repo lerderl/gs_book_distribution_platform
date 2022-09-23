@@ -1,0 +1,33 @@
+<h1>Region List Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Region</th>
+      <th>Unit Price</th>
+      <th>Quantity Allotted</th>
+      <th>Amount Allotted</th>
+      <th>Quantity Redemeed</th>
+      <th>Amount Redemeed</th>
+      <th>Quantity Balance</th>
+      <th>Amount Balance</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.region %></td>
+        <td><%= book.price %></td>
+        <td><%= book.qty_allotted %></td>
+        <td><%= book.amt_allotted %></td>
+        <td><%= book.qty_paid %></td>
+        <td><%= book.amt_paid %></td>
+        <td><%= book.qty_bal %></td>
+        <td><%= book.amt_bal %></td>
+        <td>Placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
