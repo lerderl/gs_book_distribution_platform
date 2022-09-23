@@ -1,4 +1,4 @@
-<h1>Region List Details</h1>
+<h1>Regions List Details</h1>
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @books.each do |book| %>
+    <% @books.reverse_each do |book| %>
       <tr>
         <td><%= book.region %></td>
         <td><%= book.price %></td>

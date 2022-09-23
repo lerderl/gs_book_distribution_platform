@@ -8,7 +8,7 @@
 - The login page can be found at [localhost](http://127.0.0.1:3000/)
 - The home page can be found at [localhost](http://127.0.0.1:3000/home)
 
-# The front-end: Show, List a region
+# The front-end: Show & create a region, List all regions details
 
 - Route
 - Controller#action
