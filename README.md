@@ -14,3 +14,4 @@
 - Controller#action
 - Model/db table
 - View
+- Error messages and flash helper (hash)

@@ -1,4 +1,13 @@
 <h1>Add a new region/group</h1>
+
+<% if @book.errors.any? %>
+  <h2>The following errors prevented the region from being saved</h2>
+  <ul>
+    <% @book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
  
 <%= form_with scope: :book, url: books_path, local: true do |f| %>
   <p> 
