@@ -1,4 +1,4 @@
-<h1>Add a new group/region</h1>
+<h1>Edit group/region</h1>
 
 <% if @book.errors.any? %>
   <h2>The following errors prevented the region from being saved</h2>
@@ -9,7 +9,7 @@
   </ul>
 <% end %>
  
-<%= form_with scope: :book, url: books_path, local: true do |f| %>
+<%= form_with(model: @book, local: true) do |f| %>
   <p> 
     <%= f.label :region %><br/> 
     <%= f.text_field :region %>
