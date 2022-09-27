@@ -15,6 +15,7 @@
 - Model/db table
 - View
 - Error messages and flash helper (hash)
+- Add layout links
 <!-- - <td><%= link_to 'Delete', book_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td> -->
 
   <!-- def destroy

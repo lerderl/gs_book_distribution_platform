@@ -8,3 +8,7 @@
 <p><strong>Amount Redemeed: </strong><%= @book.amt_paid %></p>
 <p><strong>Quantity Balance: </strong><%= @book.qty_bal %></p>
 <p><strong>Amount Balance: </strong><%= @book.amt_bal %></p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Delete', book_path(@book), method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to 'Back to group/region list', books_path %>

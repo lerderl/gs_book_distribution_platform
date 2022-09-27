@@ -11,7 +11,7 @@
       <th>Amt Redemeed</th>
       <th>Qty Bal</th>
       <th>Amt Bal</th>
-      <th>Actions</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -27,7 +27,13 @@
         <td><%= book.qty_bal %></td>
         <td><%= book.amt_bal %></td>
         <td><%= link_to 'Show', book_path(book) %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Delete', book_path(book), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<p>
+  <%= link_to 'Create new group/region', new_book_path %>
+</p>
