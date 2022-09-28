@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
+
   def show
-    @book = Book.find(params[:id])
   end
 
   def index
@@ -12,7 +13,7 @@ class BooksController < ApplicationController
   end
    
   def create 
-    @book = Book.new(params.require(:book).permit(:region, :price, :qty_allotted, :amt_allotted, :qty_paid, :amt_paid, :qty_bal, :amt_bal))
+    @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Region was added successfully."
       redirect_to @book
@@ -22,16 +23,29 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
   end
 
   def update
-    @book = Book.find(params[:id])
-    if @book.update(params.require(:book).permit(:region, :price, :qty_allotted, :amt_allotted, :qty_paid, :amt_paid, :qty_bal, :amt_bal))
+    if @book.update(book_params)
       flash[:notice] = "Region was updated successfully."
       redirect_to @book
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @book.destroy
+    redirect_to books_path
+  end
+
+  private
+
+  def set_book
+    @book = Book.find(params[:id])
+  end
+
+  def book_params
+    params.require(:book).permit(:region, :price, :qty_allotted, :amt_allotted, :qty_paid, :amt_paid, :qty_bal, :amt_bal)
   end
 end

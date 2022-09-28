@@ -1,0 +1,46 @@
+<% if @book.errors.any? %>
+  <h2>The following errors prevented the region from being saved</h2>
+  <ul>
+    <% @book.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+ 
+<%= form_with(model: @book, local: true) do |f| %>
+  <p> 
+    <%= f.label :region %><br/> 
+    <%= f.text_field :region %>
+  </p>
+  <p>
+    <%= f.label :price %><br/> 
+    <%= f.number_field :price %> 
+  </p>
+  <p> 
+    <%= f.label :qty_allotted %><br/> 
+    <%= f.number_field :qty_allotted %>
+  </p>
+  <p>
+    <%= f.label :amt_allotted %><br/> 
+    <%= f.number_field :amt_allotted %> 
+  </p>
+  <p> 
+    <%= f.label :qty_paid %><br/> 
+    <%= f.number_field :qty_paid %>
+  </p>
+  <p>
+    <%= f.label :amt_paid %><br/> 
+    <%= f.number_field :amt_paid %> 
+  </p>
+  <p> 
+    <%= f.label :qty_bal %><br/> 
+    <%= f.number_field :qty_bal %>
+  </p>
+  <p>
+    <%= f.label :amt_bal %><br/> 
+    <%= f.number_field :amt_bal %> 
+  </p>
+  <p>
+    <%= f.submit %> 
+  </p>
+<% end %>
