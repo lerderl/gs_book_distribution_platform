@@ -13,16 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
  .navbar {
-    background-color: #FDF6EA !important;  
-  }   
-  
-  .navbar-brand {  
-    font-size: 3rem;
-  }   
-  
-  h1 {  
-    color: red;  
+    background-color: #000080 !important;
+  }
+
+  .nav-link {
+    color: white !important;
+  }
+
+  #logo {
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+
+  #home-container {
+    margin-top: 25px;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  #page-content {
+    flex: 1 0 auto;
+    background-color: lightgrey;
+    background-image: asset-url('dlbc.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: inherit;
+  }
+
+  #sticky-footer {
+    flex-shrink: none;
+    background-color: #000080 !important;
   }
  
 
