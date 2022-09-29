@@ -20,9 +20,13 @@
         </li>
       </ul>
       <div class="d-flex">
-        <%= link_to "Signup", signup_path, class: "btn btn-outline-light" %>
-        <%= link_to 'Login', login_path, class: "btn btn-outline-light space" %>
-        <%= link_to 'Logout', logout_path, class: "btn btn-outline-light space", method: :delete %>
+        <% if logged_in? %>
+          <%= link_to current_user.username, user_path(current_user), class: "btn btn-outline-light" %>
+          <%= link_to 'Logout', logout_path, class: "btn btn-outline-light space", method: :delete %>
+        <% else %>
+          <%= link_to 'Login', login_path, class: "btn btn-outline-light" %>
+          <%= link_to 'Signup', signup_path, class: "btn btn-outline-light space" %>
+        <% end %>
       </div>
     </div>
   </div>
