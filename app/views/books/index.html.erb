@@ -1,5 +1,5 @@
 <h1 class="text-center mt-4">Listing all groups/regions</h1>
-<div class="container">
+<div class="container mb-4">
   <% @books.reverse_each do |book| %>
     <div class="row justify-content-md-center">
       <div class="col-8 mt-4">
@@ -22,7 +22,3 @@
     </div>
   <% end %>
 </div>
-
-<p>
-  <%= link_to 'Create new group/region', new_book_path %>
-</p>

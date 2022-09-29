@@ -21,8 +21,10 @@
           <small>Created <%= time_ago_in_words(@book.created_at) %> ago, edited <%= time_ago_in_words(@book.updated_at) %> ago</small>
         </div>
       </div>
+
+      <div class="mb-3">
+        <%= link_to 'Back to group/region list', books_path, class: "text-info" %>
+      </div>
     </div>
   </div>
 </div>
-
-<%= link_to 'Back to group/region list', books_path %>
