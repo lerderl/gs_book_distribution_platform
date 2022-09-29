@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update]
 
   def show
   end
@@ -32,11 +32,6 @@ class BooksController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def destroy
-    @book.destroy
-    redirect_to books_path
   end
 
   private

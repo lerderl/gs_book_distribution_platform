@@ -12,7 +12,6 @@
             <p class="card-text">Qty Balance: <%= book.qty_bal %></p>
             <%= link_to "View", book_path(book), class: "btn btn-outline-success" %>
             <%= link_to "Edit", edit_book_path(book), class: "btn btn-outline-info" %>
-            <%= link_to "Delete", book_path(book), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
           </div>
           <div class="card-footer text-muted">
             <small>Created <%= time_ago_in_words(book.created_at) %> ago, edited <%= time_ago_in_words(book.updated_at) %> ago</small>
