@@ -4,7 +4,9 @@
       <div class="col-8 mt-4">
         <div class="card text-center">
           <div class="card-header">
-            <%= group.user.username if group.user %>
+            <% if group.user %>
+              <%= link_to group.user.username, user_path(group.user) %>
+            <% end %>
           </div>
           <div class="card-body">
             <p class="card-text">Qty Allocated: <%= group.qty_allotted %></p>
