@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'home', to: 'pages#home'
   resources :books
   resources :groups
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end

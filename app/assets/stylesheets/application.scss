@@ -45,10 +45,20 @@
     background-color: lightgrey;
   }
 
+  #dlbc-logo {    
+    background-image: asset-url('dlbc.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 425px;
+  }
+
   #sticky-footer {
     flex-shrink: none;
     background-color: #000080 !important;
   }
  
+  h1 {
+    text-align: center;
+  }
 
  @import 'bootstrap';
