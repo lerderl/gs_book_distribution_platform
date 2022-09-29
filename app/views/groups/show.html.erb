@@ -1,0 +1,29 @@
+<h1 class="text-center mt-4"><%= @group.region %></h1>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8 mt-4">
+      <div class="card text-center shadow mb-5 bg-white rounded">
+        <div class="card-header font-italic">
+          <%= @group.region %>
+        </div>
+        <div class="card-body">
+          <div class="card-text text-left">Unit Price: <%= @group.price %></div>
+          <div class="card-text text-left mt-2">Quantity Allocated: <%= @group.qty_allotted %></div>
+          <div class="card-text text-left mt-2">Amount Allocated: <%= @group.amt_allotted %></div>
+          <div class="card-text text-left mt-2">Quantity Redemeed: <%= @group.qty_paid %></div>
+          <div class="card-text text-left mt-2">Amount Redemeed: <%= @group.amt_paid %></div>
+          <div class="card-text text-left mt-2">Quantity Balance: <%= @group.qty_bal %></div>
+          <div class="card-text text-left mt-2 mb-3">Amount Balance: <%= @group.amt_bal %></div>
+          <%= link_to "Edit", edit_group_path(@group), class: "btn btn-outline-info" %>
+        </div>
+        <div class="card-footer text-muted">
+          <small>Created <%= time_ago_in_words(@group.created_at) %> ago, edited <%= time_ago_in_words(@group.updated_at) %> ago</small>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <%= link_to 'Back to group/region list', groups_path, class: "text-info" %>
+      </div>
+    </div>
+  </div>
+</div>
