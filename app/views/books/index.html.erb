@@ -10,7 +10,7 @@
             </div>
             <div class="card-body">
               <p class="card-text">Qty Allocated: <%= book.qty_allotted %></p>
-              <p class="card-text">Qty Bal: <%= book.qty_bal %></p>
+              <p class="card-text">Qty Balance: <%= book.qty_bal %></p>
               <%= link_to "View", book_path(book), class: "btn btn-outline-success" %>
               <%= link_to "Edit", edit_book_path(book), class: "btn btn-outline-info" %>
               <%= link_to "Delete", book_path(book), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
