@@ -81,3 +81,7 @@ end
 
 # For bootstrap
 gem 'bootstrap', '~> 5.2.1'
+
+# For pagination
+# gem 'will_paginate', '~> 3.3'
+# gem 'pagy', '~> 5.10', '>= 5.10.1'
