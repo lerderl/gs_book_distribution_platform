@@ -14,6 +14,7 @@ class GroupsController < ApplicationController
    
   def create 
     @group = Group.new(group_params)
+    @group.user = User.first
     if @group.save
       flash[:notice] = "Group/Region was added successfully."
       redirect_to @group

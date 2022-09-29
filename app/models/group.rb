@@ -1,4 +1,5 @@
 class Group < ApplicationRecord
+  belongs_to :user
   validates :region, presence: true
   validates :price, presence: true
   validates :qty_allotted, presence: true
