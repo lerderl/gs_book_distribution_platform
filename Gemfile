@@ -78,3 +78,6 @@ end
 
 # Use for user authentication
 # gem 'devise'
+
+# For bootstrap
+gem 'bootstrap', '~> 5.2.1'
