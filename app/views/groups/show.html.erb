@@ -5,6 +5,7 @@
       <div class="card text-center shadow mb-5 bg-white rounded">
         <div class="card-header font-italic">
           <%= @group.region %>
+          <%= @group.user.username if @group.user %>
         </div>
         <div class="card-body">
           <div class="card-text text-left">Unit Price: <%= @group.price %></div>

@@ -6,6 +6,7 @@
         <div class="card text-center">
           <div class="card-header">
             <%= link_to group.region, group_path(group), class: "text-success" %>
+            <%= group.user.username if group.user %>
           </div>
           <div class="card-body">
             <p class="card-text">Qty Allocated: <%= group.qty_allotted %></p>
