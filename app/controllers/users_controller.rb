@@ -27,6 +27,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @groups = @user.groups
+  end
+
   private
 
   def user_params
