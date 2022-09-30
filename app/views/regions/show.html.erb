@@ -1,0 +1,9 @@
+<h1 class="text-center mt-4">Group/Region: <%= @region.region %></h1>
+
+<% if logged_in? && current_user.admin? %>
+  <div class="text-center mt-4">
+    <%= link_to "Edit region name", edit_region_path(@region), class: "btn btn-outline-info" %>
+  </div>
+<% end %>
+
+<%= render 'regions/region' %>

@@ -44,7 +44,7 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:region, :price, :qty_allotted, :amt_allotted, :qty_paid, :amt_paid, :qty_bal, :amt_bal)
+    params.require(:group).permit(:region, :price, :qty_allotted, :amt_allotted, :qty_paid, :amt_paid, :qty_bal, :amt_bal, region_ids: [])
   end
 
   def require_same_user

@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_30_130616) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_30_155318) do
+  create_table "article_categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "books", force: :cascade do |t|
     t.string "region", default: "", null: false
     t.integer "price", null: false
@@ -20,6 +25,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_130616) do
     t.integer "amt_paid"
     t.integer "qty_bal", null: false
     t.integer "amt_bal", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "group_regions", force: :cascade do |t|
+    t.integer "group_id"
+    t.integer "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +48,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_30_130616) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "region"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

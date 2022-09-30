@@ -7,6 +7,9 @@
             <% if group.user %>
               <%= link_to group.region, user_path(group.user) %>
             <% end %>
+            <% if group.regions.any? %>
+              <div class="mt-2"><%= render group.regions %></div> 
+            <% end %>
           </div>
           <div class="card-body">
             <p class="card-text">Qty Allocated: <%= group.qty_allotted %></p>

@@ -11,16 +11,29 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Groups/Regions
+            Groups/Regions details
           </a>
           <ul class="dropdown-menu">
             <% if logged_in? %>
               <% if current_user.admin? %>
-                <%= link_to "Add a new group/region", new_group_path, class: "dropdown-item" %> 
+                <%= link_to "Add a new group/region detail", new_group_path, class: "dropdown-item" %> 
               <% end %> 
-              <%= link_to "View groups/regions", groups_path, class: "dropdown-item" %>
+              <%= link_to "View groups/regions details", groups_path, class: "dropdown-item" %>
             <% end %>
           </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Groups/Regions
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% if logged_in? %>
+              <% if current_user.admin? %>
+                <%= link_to "Add a new group/region", new_region_path, class: "dropdown-item" %>
+              <% end %>  
+              <%= link_to "View groups/regions", regions_path, class: "dropdown-item" %>
+            <% end %>
+          </div>
         </li>
         <% if logged_in? %>
           <li class="nav-item dropdown">
