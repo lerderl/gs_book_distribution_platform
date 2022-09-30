@@ -5,8 +5,7 @@
 
 # Routes
 
-- The login page can be found at [localhost](http://127.0.0.1:3000/)
-- The home page can be found at [localhost](http://127.0.0.1:3000/home)
+- The home page can be found at [localhost](http://127.0.0.1:3000/)
 
 # The front-end: Show, edit, update, delete & create a region, List all regions details
 
