@@ -1,5 +1,7 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update]
+  before_action :require_user, except: [:show, :index]
+  before_action :require_same_user, only: [:edit, :update]
 
   def show
   end
@@ -43,5 +45,12 @@ class GroupsController < ApplicationController
 
   def group_params
     params.require(:group).permit(:region, :price, :qty_allotted, :amt_allotted, :qty_paid, :amt_paid, :qty_bal, :amt_bal)
+  end
+
+  def require_same_user
+    if current_user != @group.user
+      flash[:alert] = "You can only edit your own group/region"
+      redirect_to @group
+    end
   end
 end
