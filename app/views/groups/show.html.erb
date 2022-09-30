@@ -14,7 +14,7 @@
           <div class="card-text text-left mt-2">Amount Redemeed: <%= @group.amt_paid %></div>
           <div class="card-text text-left mt-2">Quantity Balance: <%= @group.qty_bal %></div>
           <div class="card-text text-left mt-2 mb-3">Amount Balance: <%= @group.amt_bal %></div>
-          <% if logged_in? && @group.user == current_user %>
+          <% if logged_in? && @group.user == current_user || current_user.admin? %>
             <%= link_to "Edit", edit_group_path(@group), class: "btn btn-outline-info" %>
           <% end %>
         </div>

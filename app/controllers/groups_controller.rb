@@ -48,7 +48,7 @@ class GroupsController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @group.user
+    if current_user != @group.user && !current_user.admin?
       flash[:alert] = "You can only edit your own group/region"
       redirect_to @group
     end
