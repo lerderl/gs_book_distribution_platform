@@ -12,7 +12,9 @@
             <p class="card-text">Qty Allocated: <%= group.qty_allotted %></p>
             <p class="card-text">Qty Balance: <%= group.qty_bal %></p>
             <%= link_to "View", group_path(group), class: "btn btn-outline-success" %>
-            <%= link_to "Edit", edit_group_path(group), class: "btn btn-outline-info" %>
+            <% if logged_in? && group.user == current_user %>
+              <%= link_to "Edit", edit_group_path(group), class: "btn btn-outline-info" %>
+            <% end %>
           </div>
           <div class="card-footer text-muted">
             <small>Created <%= time_ago_in_words(group.created_at) %> ago, edited <%= time_ago_in_words(group.updated_at) %> ago</small>
