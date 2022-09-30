@@ -14,14 +14,26 @@
             Groups/Regions
           </a>
           <ul class="dropdown-menu">
-            <%= link_to "Add a new group/region", new_group_path, class: "dropdown-item" %>
+            <% if logged_in? %>
+              <%= link_to "Add a new group/region", new_group_path, class: "dropdown-item" %>
+            <% end %>  
             <%= link_to "View groups/regions", groups_path, class: "dropdown-item" %>
           </ul>
         </li>
+        <% if logged_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Profile [<%= current_user.username %>]
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
       </ul>
       <div class="d-flex">
         <% if logged_in? %>
-          <%= link_to current_user.username, user_path(current_user), class: "btn btn-outline-light" %>
           <%= button_to logout_path, class: "btn btn-outline-light space", method: :delete do %>
             Logout
           <% end %>
