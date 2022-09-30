@@ -16,13 +16,6 @@
 - View
 - Error messages and flash helper (hash)
 - Add layout links
-<!-- - <td><%= link_to 'Delete', book_path(book), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></td> -->
-
-  <!-- def destroy
-    @book = Book.find(params[:id])
-    @book.destroy
-    redirect_to books_path, status: :see_other
-  end -->
 
 # REST - Representational state transfer - mapping HTTP verbs (get, post, put/patch, delete) to CRUD actions
 
@@ -46,3 +39,8 @@ resources provides REST-ful routes to Rails resources
 - Edit your `app/assets/stylesheets/application.css` to `app/assets/stylesheets/application.scss` and add this line `@import 'bootstrap';`
 - Make sure your layout `(app/views/application.html.erb)` contains `<%= javascript_importmap_tags %>`
 - Lastly, in case of any challenges with `bundle install`, you can run `gem install bootstrap` instead.
+
+# REST for users
+- Authentication: Login using secure password
+- Restriction of actions: Based on logged in/logged out state
+- Security: Admin user functionality and access level
